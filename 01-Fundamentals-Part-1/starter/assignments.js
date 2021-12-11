@@ -4,14 +4,14 @@ Just making a multi-line comment for knowing the multi-line symbol for later.
 */
 
 
-//Assignment from Values and Variables Lecture
+// Assignment from Values and Variables Lecture🔥
 
-const country = "United States";
+const country = "the United States";
 const continent = "North America";
-let population = 300
+let population = 40
 console.log("Country:",country,"Continent:",continent,"Population:",population);
 
-//Assignment from Data Types Lecture
+// Assignment from Data Types Lecture🔥
 
 const isIsland = false;
 let language;
@@ -21,11 +21,11 @@ console.log("population is type:", typeof population);
 console.log("country is type:", typeof country);
 console.log("language is type:", typeof language);
 
-//Assignment from Let, Const and Var Lecture
+// Assignment from Let, Const and Var Lecture🔥
 
-language = 'English';
+language = 'mandarin';
 
-//Assignment from Basic Operators Lecture
+// Assignment from Basic Operators Lecture🔥
 
 
 let halfPopulation = (population / 2);
@@ -38,14 +38,14 @@ const isBiggerThanAveragePop = (population > averageCountryPopulation);
 //const description = country + ' is in ' + continent + ', and its ' + population + ' million people speak ' + language;
 //console.log(description);
 
-//Assignment from Strings and Template Literals
+//Assignment from Strings and Template Literals🔥
 /* 1. Recreate the 'description' variable from the last assignment, this time 
 using the template literal syntax */
 
 const description = `${country} is in ${continent}, and its ${population} million people speak ${language}.`
 console.log(description);
 
-//Assignment from if/else statements
+// Assignment from if/else statements🔥
 /*
 1. If your country's population is greater that 33 million, log a string like this to the 
 console: 'Portugal's population is above average'. Otherwise, log a string like 
@@ -63,7 +63,7 @@ if (population > 33) {
     );
 }
 
-//Assignment from Type Conversion and Coercion
+// Assignment from Type Conversion and Coercion🔥
 
 /*
 1. Predict the result of these 5 operations without executing them:
@@ -77,7 +77,7 @@ if (population > 33) {
 
 // I was wrong on a few but understand where I went wrong.
 
-//Assignment from Equality Operators🔥
+// Assignment from Equality Operators🔥
 
 let numNeighbors = Number(prompt('How many neighbor countries does your country have?'));
 
@@ -89,3 +89,33 @@ if (numNeighbors === 1) {
     console.log('No borders');
 }
 
+// Assignment from Logical Operators
+
+if (population < 50 && language === 'English' && !isIsland) {
+    console.log(`You should live in ${country}!`);
+} else {
+    console.log(`${country} does not meet your criteria.`);
+}
+
+// Assignment from Switch Statements
+
+switch (language) {
+    case 'chinese':
+    case 'mandarin':
+        console.log('MOST number of native speakers!');
+        break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers');
+        break;
+    case 'english':
+        console.log('3rd place');
+        break;
+    case 'hindi':
+        console.log('4th place');
+        break;
+    case 'arabic':
+        console.log('5th place');
+        break;
+    default:
+        console.log('Great language too!')
+}
