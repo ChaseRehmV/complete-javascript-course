@@ -54,7 +54,7 @@ console.log(age1, age2);
 
 // NOTE: Function declarations can be used before the function is declared in the code. For example, the below would work because when the tirePressure variable is being assigned, the compiler sees the reference to the function and goes to find that function
 
-const tirePressure = airPressureCalc(40, 30);
+const tirePressure = pressureCalc(40, 30);
 
 function pressureCalc(tireSize, wheelSize) {
     return tireSize * wheelSize; // this isn't how you calculate PSI in a tire but just for example sake
@@ -88,7 +88,7 @@ console.log(age3);
 
 // more complex arrow function with more happening in the body
 
-const yearsUntilRetirement = (birthYear, currentAge) => {
+const yearsUntilRetirement = (birthYear, firstName) => {
     const currentAge = 2021 - birthYear;
     const retirement = 65 - currentAge;
     return retirement;
@@ -96,5 +96,34 @@ const yearsUntilRetirement = (birthYear, currentAge) => {
 
 // arrow functions are great for one-liner calculation but there are limitations and can't be used in ALL scenarios or may not be best for ALL scenarios
 
+// 🔥🔥/*** Functions calling other Functions***/🔥🔥
+
+// Functions can often call other functions within the body of a function. For example, if I use the foodProcessor function from the Fundamentals Part 1 section, I could add a different function called foodSlicer that would create pieces of the fruit being used in the processor. In the example below, our foodSlicer function takes a fruit and then multiplies it by 4 (the number of slice it makes of the fruit)
+
+function foodSlicer (fruit) {
+    return fruit * 4
+}
+
+function foodProcessor (apples, oranges) {
+    const applePieces = foodSlicer(apples);
+    const orangePieces = foodSlicer(oranges);
+    
+    const juice = `We made a juice with ${applePieces} pieces of apple and ${orangePieces} of orange!`
+    return juice;
+}
+
+console.log(foodProcessor(4,3));
+
+// 🔥🔥/*** Reviewing Functions ***/🔥🔥
+
+// the 'return' operator immediately exits the function. so if you have code after the return function, it will not execute. this is true also in the case of return statements inside of if/else statements
+
+// 🔥🔥/*** Arrays ***/🔥🔥
+
+const friends = [`Michael`, `Steven`, `Peter`];
+
+const years = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0])
 
 
