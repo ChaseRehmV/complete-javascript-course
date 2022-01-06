@@ -109,3 +109,5 @@ const percentages = [
     percentageOfWorld1(populations[2]), 
     percentageOfWorld1(populations[3])
 ];
+
+

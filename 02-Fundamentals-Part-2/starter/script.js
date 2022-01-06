@@ -120,10 +120,42 @@ console.log(foodProcessor(4,3));
 
 // 🔥🔥/*** Arrays ***/🔥🔥
 
-const friends = [`Michael`, `Steven`, `Peter`];
+// const friends = [`Michael`, `Steven`, `Peter`];
 
 const years = new Array(1991, 1984, 2008, 2020);
 
-console.log(friends[0])
+// console.log(friends[0])
+
+
+// 🔥🔥/*** Array Methods ***/🔥🔥
+
+// Add Elements
+const friends = [`Michael`, `Steven`, `Peter`];
+friends.push('Jay'); // push adds an element to the end of an array
+console.log(friends);
+
+friends.unshift('John'); // unshift adds an element to the beginning of an array
+
+// Remove Elements
+const poppedElement = friends.pop(); // Removes last element and returns the removed element
+console.log(poppedElement);
+
+friends.shift(); // Removes first element and returns the removed element
+
+// Returning the index position of a given element
+console.log(friends.indexOf('Steven'));
+
+// Returns True or False depending on the given element being contained within the array
+console.log(friends.includes('Steven'));
+
+// a handy use for the 'includes' method is in conditional statements
+
+if (friends.includes('Steven')) {
+    console.log('Steven is in your array.');
+} else {
+    console.log('Steven is not in your array!');
+};
+
+
 
 
