@@ -1,3 +1,5 @@
+console.log('/// BEGINNING OF LECTURE SCRIPT ///')
+
 // 🔥🔥/*** Strict Mode ***/🔥🔥
 
 // the string 'use strict' must be at the very beginning of the script file.
@@ -155,6 +157,165 @@ if (friends.includes('Steven')) {
 } else {
     console.log('Steven is not in your array!');
 };
+
+
+// 🔥🔥/*** Intro to Objects ***/🔥🔥
+
+const chase = {
+    firstName: 'Chase',
+    lastName: 'Rehm',
+    age: 2022 - 1991,
+    job: 'QA Engineer',
+    friends: ['Ty', 'Dean', 'Colby', 'Dave']
+}
+
+// 🔥🔥/*** Dot vs Bracket Notation for Objects ***/🔥🔥
+
+console.log(chase);
+
+// Dot Notation requires you to use a literal property name from the object. 
+console.log(chase.lastName); // returns Rehm
+
+// Bracket Notation is a way to use computed methods to extract the property value that matches the computed value. You can use any express that yields a value that matches the value of a property name with bracket notation. 
+const nameKey = 'Name'
+console.log(chase['first' + nameKey]); // returns Chase
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Michael."
+
+const output = `${chase.firstName} has ${chase.friends.length} friends, and his best friend is called ${chase.friends[0]}.`
+console.log(output);
+
+// 🔥🔥/*** Object Methods ***/🔥🔥
+
+const kim = {
+    firstName: 'Kim',
+    lastName: 'Rehm',
+    birthYear: 1991,
+    job: 'Data Analyst',
+    friends: ['Ty', 'Dean', 'Colby', 'Dave'],
+    hasDriversLicense: true,
+
+    calcAge: function() {
+        return 2022 - this.birthYear;
+    },
+
+    getSummary: function() {
+        let driverLicenseString;
+        this.hasDriversLicense ? driverLicenseString = 'do have a drivers license' : driverLicenseString = 'do not have a drivers license'
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and they ${driverLicenseString}.`
+    }
+};
+
+console.log(kim.calcAge());
+console.log(kim.getSummary());
+
+// Challenge
+// "Jonas is a 46-year old teacher, and <instert whether or not they have a driver's license>." 
+// my solution above
+
+// 🔥🔥/*** Iteration: The For Loop ***/🔥🔥
+
+
+// for loop keeps running while condition (middle part) is TRUE
+for(let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}.`)
+};
+
+// 🔥🔥/*** Looping Arrays, Breaking, Continuing ***/🔥🔥
+
+const exampleArray = [
+    'nameOfPerson',
+    'nameOfFriend1',
+    'nameOfPet',
+    2022 - 1991,
+    ['Ty', 'Colby', 'Dean', 'Dave'],
+    true,
+]
+
+const types = [];
+
+for(let i = 0; i < kim.friends.length; i++) {
+    console.log(kim.friends[i], typeof exampleArray[i]);
+
+    // Filling the types array with each of the types from the kim.friends array
+    // types[i] = typeof exampleArray[i];
+    types.push(typeof exampleArray[i])
+};
+
+const years2 = [1991, 2008, 1969, 2020]
+const ages = []
+
+for (let i = 0; i < years2.length; i++) {
+    ages.push(2022 - years2[i]);
+};
+
+// continue and break statements
+
+const exampleArray2 = [
+    'nameOfPerson',
+    2022 - 1991,
+    'nameOfPet',
+    ['Ty', 'Colby', 'Dean', 'Dave'],
+    'nameOfFriend1',
+    true,
+]
+
+console.log(' --- PRINTING STRINGS ONLY --- ')
+for(let i = 0; i < exampleArray2.length; i++) {
+    // continue makes the loop move onto the next iteration if the condition is met
+    if (typeof exampleArray2[i] !== 'string') continue;
+    // so this loop will only log the elements of the exampleArray2 that have a type of string
+    console.log(exampleArray2[i], typeof exampleArray2[i]);
+};
+
+console.log(' --- BREAK IF YOU FIND A NUMBER --- ')
+for(let i = 0; i < exampleArray2.length; i++) {
+    // continue makes the loop move onto the next iteration if the condition is met
+    if (typeof exampleArray2[i] === 'number') break;
+    // so this loop will only log the elements of the exampleArray2 that have a type of string
+    console.log(exampleArray2[i], typeof exampleArray2[i]);
+};
+
+// 🔥🔥 Looping Backwards and Loops in Loops 🔥🔥 //
+
+// looping backwards by starting at the last element in an array then decrementing the iteration by one instead of increasing it by one
+
+for (let i = exampleArray2.length - 1; i >= 0; i--) {
+    console.log(i, exampleArray2[i]);
+};
+
+// looping inside of a loop
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep <= 10; rep++) {
+        console.log(`Finished rep ${rep}`);
+    };
+};
+
+// 🔥🔥 The While Loop 🔥🔥 //
+
+
+let rep =1;
+
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep}`);
+    rep++;    
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) {console.log(`You rolled a ${dice}, loop is ending...`)}
+};
+
+
+
+
 
 
 

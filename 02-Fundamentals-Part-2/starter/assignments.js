@@ -1,5 +1,5 @@
 
-
+console.log('/// BEGINNING OF ASSIGNMENTS ///');
 /* 
 LECTURE: Functions
 1. Write a function called 'describeCountry' which takes three parameters: 
