@@ -12,7 +12,9 @@ console.log('Example console log');
 console.log('what are you doing');
 console.log('what are you doing');
 console.log('what are you doing');
+console.log('what are you doing');
 
 const party = 'partyparty';
 
 console.log(exampleArrowFunction(1991));
+console.log(exampleArrowFunction(1984));
