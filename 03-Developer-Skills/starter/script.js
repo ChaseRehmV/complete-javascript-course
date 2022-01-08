@@ -11,6 +11,7 @@ console.log('Example');
 console.log('Example console log');
 console.log('what are you doing');
 console.log('what are you doing');
+console.log('what are you doing');
 
 const party = 'partyparty';
 
